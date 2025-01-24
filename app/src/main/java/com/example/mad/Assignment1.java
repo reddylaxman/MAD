@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public class Assignment1 extends AppCompatActivity {
@@ -46,15 +47,33 @@ public class Assignment1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String doj = faculty.getDoj();
+                if (doj==null||doj.isEmpty()) {
+                    Toast.makeText(Assignment1.this, "Please fill the all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+                LocalDate joinDate = LocalDate.parse(doj, DateTimeFormatter.ofPattern("d-M-yyyy"));
+                LocalDate currentDate = LocalDate.now();
+
+                if (joinDate.isAfter(currentDate)) {
+                    Toast.makeText(Assignment1.this, "Date of joining can't be in the future", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+
                 faculty.setName(facultyName.getText().toString());
                 faculty.setGender(GetGender());
 
-                if(!faculty.getName().isEmpty() && (faculty.getExp()>0) && !faculty.getDesignation().isEmpty()&& !faculty.getGender().isEmpty()&& !faculty.getDoj().isEmpty()) {
+                if(!faculty.getName().isEmpty() && !faculty.getDesignation().isEmpty()&& !faculty.getGender().isEmpty()&& !faculty.getDoj().isEmpty()) {
+
                     Intent intent = new Intent(Assignment1.this, Assignment1_second.class);
                     intent.putExtra("key",faculty);
                     startActivity(intent);
                 }else{
-                    Toast.makeText(Assignment1.this, "Please fill the data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Assignment1.this, "Please fill the all fields", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -112,13 +131,10 @@ public class Assignment1 extends AppCompatActivity {
                         faculty.setDoj(dayOfMonth + "-" + month + "-" + year);
                         LocalDate currentDate= LocalDate.now();
                         LocalDate joinDate= LocalDate.of(year,month,dayOfMonth);
-                        if(joinDate.isAfter(currentDate)){
-                            Toast.makeText(Assignment1.this, "Date of join can't be in future", Toast.LENGTH_SHORT).show();
-                        }
                         Period period= Period.between(joinDate,currentDate);
                         float years= period.getYears();
                         float months=period.getMonths();
-                        faculty.setExp(years+(months/12.0f));
+                        faculty.setExp(years+(months/100.0f));
                         EditText editTextDOJ = findViewById(R.id.editDOJ);
                         editTextDOJ.setText(faculty.getDoj());
                     }
