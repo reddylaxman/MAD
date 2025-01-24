@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo"
+        android:label="MAD"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mad"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Assignment_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment1_second"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment1"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".week5"
+            android:exported="false" />
+        <activity
+            android:name=".week4_second"
+            android:exported="false" />
+        <activity
+            android:name=".week4_main"
+            android:exported="false" />
+        <activity
+            android:name=".week3b_second"
+            android:exported="false" />
+        <activity
+            android:name=".week3b_main"
+            android:exported="false" />
+        <activity
+            android:name=".week3a_second"
+            android:exported="false" />
+        <activity
+            android:name=".week3a_main"
+            android:exported="false" />
+        <activity
+            android:name=".week2"
+            android:exported="false" />
+        <activity
+            android:name=".week1"
+            android:exported="false" />
+        <activity
+            android:name=".Week_Activity"
+            android:exported="true" />
+    </application>
+
+</manifest>

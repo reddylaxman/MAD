@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assignment1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        tools:context=".Week_Activity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/customborder">
+            <EditText
+                android:id="@+id/facultyName"
+                android:hint="Enter Name"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="40dp">
+            </EditText>
+            <Spinner
+                android:id="@+id/spinnerDesignation"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginTop="10dp"/>
+
+
+
+            <RadioGroup
+                android:id="@+id/rbFacultyGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/rbMale">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Gender:"
+                    android:textSize="20dp">
+                </TextView>
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Male"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"/>
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Female"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"/>
+            </RadioGroup>
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Date of Join:"
+                    android:textSize="20dp"
+                    ></TextView>
+                <EditText
+                    android:id="@+id/editDOJ"
+                    android:hint="DD/MM/YYYY"
+                    android:inputType="date"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18dp"
+                    android:layout_height="40dp">
+                </EditText>
+                <Button
+                    android:id="@+id/DatePicker"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/baseline_calendar_month_24"
+                    android:onClick="ShowDatePicker"
+                    ></Button>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:text="SUBMIT"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:background="@drawable/button_border"
+                android:layout_height="40dp">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
