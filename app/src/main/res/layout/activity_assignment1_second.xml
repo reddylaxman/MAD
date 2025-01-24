@@ -24,8 +24,9 @@
         <TextView
             android:id="@+id/textViewName"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:text="Name:"
             android:textColor="@color/white"
             android:textSize="20dp" />
@@ -33,9 +34,8 @@
         <TextView
             android:id="@+id/textViewDesignation"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:text="Designation"
             android:textColor="@color/white"
             android:textSize="20dp" />
@@ -45,15 +45,15 @@
         <TextView
             android:id="@+id/textViewGender"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
             android:text="Gender: "
+            android:layout_marginTop="10dp"
             android:textColor="@color/white"
             android:textSize="20dp" />
         <TextView
             android:id="@+id/textViewDOJ"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Date of Join: "
             android:textColor="@color/white"
@@ -62,7 +62,7 @@
         <TextView
             android:id="@+id/textViewExp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Experience (in Years): "
             android:textColor="@color/white"
