@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Experience (in Years): "
+            android:text="Experience: "
             android:textColor="@color/white"
             android:textSize="20dp" />
 

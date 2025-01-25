@@ -132,9 +132,24 @@ public class Assignment1 extends AppCompatActivity {
                         LocalDate currentDate= LocalDate.now();
                         LocalDate joinDate= LocalDate.of(year,month,dayOfMonth);
                         Period period= Period.between(joinDate,currentDate);
-                        float years= period.getYears();
-                        float months=period.getMonths();
-                        faculty.setExp(years+(months/100.0f));
+                        int years= period.getYears();
+                        int months=period.getMonths();
+                        String exp="";
+                        if(years>1 && months>1){
+                            exp+=years+" years "+months+" months";
+                        }else if(years==1 && months>1){
+                            exp+=years+" year "+months+" months";
+                        }else if(years>1 && months==1){
+                            exp+=years+" years "+months+" month";
+                        }else if(years==1 && months==1){
+                            exp+=years+" year "+months+" month";
+                        }else if(months<1){
+                            exp+=years>1 ? years+" years": years+" year";
+                        }else if(years<1){
+                            exp+=months>1 ? months+" months": months+" month";
+                        }
+
+                        faculty.setExp(exp);
                         EditText editTextDOJ = findViewById(R.id.editDOJ);
                         editTextDOJ.setText(faculty.getDoj());
                     }

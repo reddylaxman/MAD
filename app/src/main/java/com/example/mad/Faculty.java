@@ -8,7 +8,7 @@ public class Faculty implements Serializable {
     private String gender;
 
     private String doj;
-    private float exp;
+    private String exp;
 
     public String getName() {
         return name;
@@ -42,11 +42,11 @@ public class Faculty implements Serializable {
         this.doj = doj;
     }
 
-    public float getExp() {
+    public String getExp() {
         return exp;
     }
 
-    public void setExp(float exp) {
+    public void setExp(String exp) {
         this.exp = exp;
     }
 }
