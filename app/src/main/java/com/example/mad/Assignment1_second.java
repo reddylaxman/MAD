@@ -27,7 +27,7 @@ public class Assignment1_second extends AppCompatActivity {
 
         String designation = "Designation: <i>" + faculty.getDesignation() + "</i>";
         String gender = "Gender: <i>" + faculty.getGender() + "</i>";
-        String exp = "Experience (in Years): <i>" + faculty.getExp() + "</i>";
+        String exp = "Experience: <i>" + faculty.getExp() + "</i>";
         String doj = "Date of Join: <i>" + faculty.getDoj() + "</i>";
 
         TextView textViewName = findViewById(R.id.textViewName);
